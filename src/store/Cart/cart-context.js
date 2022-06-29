@@ -6,6 +6,7 @@ const CartContext = createContext({
   addMeal: meal => {},
   decreaseMeal: mealId => {},
   removeMeal: mealId => {},
+  reset: () => {},
 });
 
 export default CartContext;

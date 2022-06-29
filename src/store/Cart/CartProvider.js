@@ -9,6 +9,7 @@ const CART_TYPE = {
   add: 'ADD_MEAL',
   decrease: 'DECREASE_MEAL',
   remove: 'REMOVE_MEAL',
+  reset: 'RESET',
 };
 
 const cartReducer = (state, action) => {
@@ -74,6 +75,10 @@ const cartReducer = (state, action) => {
       state.totalPrice - existingMeal.price * existingMeal.amount;
     return { meals: updatedMeals, totalPrice: totalMealPrice };
   }
+
+  if (action.type === CART_TYPE.reset) {
+    return cartState;
+  }
   return cartState;
 };
 
@@ -89,6 +94,9 @@ const CartProvider = ({ children }) => {
   const removeMeal = mealId => {
     dispatch({ type: CART_TYPE.remove, mealId });
   };
+  const reset = () => {
+    dispatch({ type: CART_TYPE.reset });
+  };
 
   return (
     <CartContext.Provider
@@ -98,6 +106,7 @@ const CartProvider = ({ children }) => {
         addMeal,
         decreaseMeal,
         removeMeal,
+        reset,
       }}>
       {children}
     </CartContext.Provider>

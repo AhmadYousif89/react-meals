@@ -2,7 +2,6 @@ import { useState } from 'react';
 import Cart from './components/Cart/Cart';
 import Header from './components/Layout/Header';
 import Meals from './components/Meals/Meals';
-import Modal from './components/UI/Modal/Modal';
 import CartProvider from './store/Cart/CartProvider';
 
 const App = () => {
@@ -17,11 +16,7 @@ const App = () => {
 
   return (
     <CartProvider>
-      {showCart && (
-        <Modal onClick={handleCartClose}>
-          <Cart onCartClose={handleCartClose} />
-        </Modal>
-      )}
+      {showCart && <Cart onCartClose={handleCartClose} />}
       <main>
         <Header onCartOpen={handleCartOpen} />
         <Meals />

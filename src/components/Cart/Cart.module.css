@@ -2,7 +2,7 @@
   list-style: none;
   margin-bottom: 2rem;
   padding: 1rem 2rem;
-  max-height: 20rem;
+  max-height: 30rem;
   overflow: auto;
 }
 
@@ -17,6 +17,9 @@
 
 .actions {
   text-align: right;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .actions button {
@@ -32,6 +35,7 @@
 .actions button:first-child {
   background: transparent;
   color: #222;
+  margin-left: auto;
 }
 
 .actions button:last-child {
