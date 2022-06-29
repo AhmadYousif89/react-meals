@@ -18,7 +18,7 @@ const Cart = ({ onCartClose }) => {
     const orderInfo = { userInfo: userData, cartItems: meals };
     const url = process.env.REACT_APP_ORDERED_MEALS_URL;
     sendRequest(url, { method: 'POST', body: orderInfo });
-    reset();
+    if (isSuccess) reset();
   };
 
   const cartContent = (
