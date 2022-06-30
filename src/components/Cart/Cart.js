@@ -25,7 +25,7 @@ const Cart = ({ onCartClose }) => {
     <section className={classes['cart-items']}>
       <CartList addedMeals={meals} />
       <div className={classes.total}>
-        <span>Total order price</span> <span>{totalPrice.toFixed(2)}</span>
+        <span>Total order price</span> <span>$ {totalPrice.toFixed(2)}</span>
       </div>
       <div className={classes.actions}>
         <Button onClick={onCartClose}>Close</Button>

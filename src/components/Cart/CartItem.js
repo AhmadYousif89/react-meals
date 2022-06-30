@@ -11,7 +11,7 @@ const CartItem = ({ meal }) => {
       <div>
         <h2>{meal.name}</h2>
         <div className={classes.summary}>
-          <p className={classes.price}>{meal.price.toFixed(2)}</p>
+          <p className={classes.price}>$ {meal.price.toFixed(2)}</p>
           <p className={classes.amount}>x {meal.amount}</p>
         </div>
       </div>

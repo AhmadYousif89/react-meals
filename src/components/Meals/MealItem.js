@@ -21,7 +21,7 @@ const MealItem = ({ meal }) => {
       <div>
         <h3>{meal.name}</h3>
         <div className={classes.description}>{meal.description}</div>
-        <div className={classes.price}>{meal.price}</div>
+        <div className={classes.price}>$ {meal.price}</div>
       </div>
       <MealItemForm mealId={meal.id} onAddMeal={addToCart} />
     </li>

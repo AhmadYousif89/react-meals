@@ -21,6 +21,7 @@
 .price {
   font-weight: bold;
   color: #8a2b06;
+  font-size: 1.25rem;
 }
 
 .amount {
